@@ -1,0 +1,107 @@
+html {
+    background-color:azure
+}
+nav {
+    text-align: right;
+    padding-right: 40px;
+}
+
+ .container{
+    margin-top: 50px;
+    margin-right: 70px;
+    margin-left: 70px;
+    margin-bottom: 50px; 
+   
+}
+.section {
+    background-color: rgb(97, 113, 113);
+    margin-top: -25px;
+    height: 550px;
+}
+#intro{
+    text-align: right;
+    padding-right: 100px;
+    padding-top: 230px;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+section {
+    height: 550px;
+    background-image: url("bg.jpg");
+    background-size: 100% 100%;
+    
+}
+
+#motto {
+    margin-top: -20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    background-color: azure;  
+}
+
+h2 {
+    text-align: center;
+}
+.aboutme {  
+    background-color: gainsboro
+}
+
+.about {
+    display: inline-block;
+    width: 450px;
+    margin-left: 200px;
+    margin-bottom: 60px;
+    padding: 10px 30px 10px 30px;
+    text-align: justify;
+   
+}
+#details {
+    color: black;
+   
+}
+
+.profilepicture {
+
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.project {
+   margin-left: 250px;
+
+}
+
+.project img {
+    margin-left: 15px;
+}
+.skills {
+    margin-left: 370px;
+}
+
+.skills img{
+   width: 100px;
+   margin-left: 30px;
+
+}
+
+
+.footer {
+    margin-left: 625px;
+    margin-top: 80px;
+}
+
+.footer img {
+    width: 15px;  
+}
+
+/*
+
+img {
+    height: 250px;
+    padding-left: 15px;
+} */
