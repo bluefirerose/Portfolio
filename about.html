@@ -1,10 +1,429 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Professional background, work experience, education, certifications, and technical skills of Rosemarie Exile.">
+
     <title>About Me | Rosemarie Exile</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ABOUT PAGE */
+        .about-hero {
+            
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .about-hero h1 span {
+            color: #60a5fa;
+        }
+
+        .about-hero p {
+            color: var(--text);
+        }
+
+        .resume-section {
+            padding: 65px 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+
+        .resume-heading {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 12px;
+        }
+
+        .resume-heading h2 {
+            color: var(--dark);
+            font-size: 28px;
+        }
+
+        .resume-heading p {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .summary-card {
+            background: #eff6ff;
+            border-left: 5px solid var(--primary);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .summary-card p {
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        /* EXPERIENCE */
+        .experience-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+        }
+
+        .company-name {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            color: var(--dark);
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .job-date {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .experience-card ul {
+            padding-left: 22px;
+        }
+
+        .experience-card li {
+            color: var(--muted);
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        /* EDUCATION */
+        .education-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .education-card h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+        .education-awards {
+            margin-top: 20px;
+        }
+
+        .education-awards h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        .awards-list {
+            padding-left: 22px;
+        }
+
+        .awards-list li {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .awards-list li strong {
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* CERTIFICATIONS */
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .certification-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .certification-item::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+        .resume-skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .resume-skill-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .resume-skill-card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .skill-tags span {
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* TRAINING */
+        .training-card {
+            background: #eff6ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .training-card h3 {
+            color: var(--dark);
+        }
+
+        .training-card p {
+            color: var(--muted);
+        }
+
+        /* KodeGo Bootcamp Skills */
+        .kodego-skills {
+            padding-left: 30px;
+            margin-top: 15px;
+            list-style-type: disc;
+        }
+
+        .kodego-skills li {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .kodego-skills li strong {
+            color: #64748b;
+            font-weight: 600;
+        }
+        /* Varia CyberSecurity Bootcamp */
+        .vapt-skills {
+            padding-left: 30px;
+            margin-top: 15px;
+            list-style-type: disc;
+        }
+
+        .vapt-skills li {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .vapt-skills li strong {
+            color: #64748b;
+            font-weight: 600;
+        }
+        /* Prepress Operation Training */
+        .prepress-skills {
+            padding-left: 30px;
+            margin-top: 15px;
+            list-style-type: disc;
+        }
+
+        .prepress-skills li {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .prepress-skills li strong {
+            color: #64748b;
+            font-weight: 600;
+        }
+
+
+        /* LANGUAGES SECTION */
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
+
+        .language-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .language-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+        }
+
+        .language-card h3 {
+            color: #0f172a;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .language-level {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* GERMAN LEVEL PROGRESSION */
+        .german-progress {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .german-level {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* CURRENT LEVEL */
+        .german-level.unlocked {
+            background: #eff6ff;
+            border: 1px solid #93c5fd;
+            color: #2563eb;
+        }
+
+        /* FUTURE LEVELS */
+        .german-level.locked {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #94a3b8;
+        }
+
+        .level-status {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .german-level.locked .level-status {
+            color: #94a3b8;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        
+        /* ABOUT PAGE CONTACT SECTION */
+        .about-contact {
+            background: #f8fafc;
+            color: #334155;
+            padding: 70px 8%;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .about-contact h2 {
+            color: #0f172a;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-contact p {
+            color: #64748b;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .about-contact p a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .about-contact p a:hover {
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 32px;
+            }
+
+            .certification-grid,
+            .resume-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-section {
+                padding: 45px 20px;
+            }
+
+            .experience-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -12,143 +431,1269 @@
     <!-- NAVIGATION -->
     <header class="header">
         <nav class="navbar">
+
             <a href="index.html" class="logo">RE<span>.</span></a>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#home">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+
         </nav>
     </header>
 
-    <!-- ABOUT CONTENT -->
-    <section class="section">
+    <main>
 
-        <div class="section-heading">
-            <p>ABOUT ME</p>
-            <h2>Rosemarie Exile</h2>
-        </div>
+        <!-- ABOUT HERO -->
+        <section class="about-hero">
 
-        <div class="about-content">
+            <h1>About <span>Me</span></h1>
 
-            <div class="about-text">
+            <p>
+                My professional journey, experience,
+                education, and technical expertise.
+            </p>
 
-                <h3>Professional Summary</h3>
+        </section>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <section class="resume-section">
+
+            <div class="resume-heading">
+                <p>INTRODUCTION</p>
+                <h2>Professional Summary</h2>
+            </div>
+
+            <div class="summary-card">
 
                 <p>
-                    Seasoned Cloud Security and IT Professional with over
-                    10 years of experience supporting enterprise customers,
-                    cloud platforms, cybersecurity operations, and Microsoft
-                    technologies. Experienced in Microsoft 365, Azure,
-                    endpoint security, vulnerability management,
-                    threat intelligence, and incident response. Supported different 
-                    productivity, infrastructure,backup and security tools.
-                </p>
+                    I am an experienced IT professional with over 10 years of expertise in 
+                    cloud technologies, enterprise technical support, and cybersecurity. 
+                    Throughout my career, I have developed a strong foundation in delivering 
+                    reliable technical solutions, resolving complex issues, and providing 
+                    exceptional customer service to enterprise-level clients.
+                </p>   
+
+                <br>
 
                 <p>
-                    Currently pursuing a Master's degree in Data Science,
-                    Artificial Intelligence, and Digital Business at
-                    Gisma University of Applied Sciences in Germany while
-                    continuing to expand expertise in cloud security,
-                    software development, and emerging technologies.
+                    My professional background covers cloud
+                    technologies, Microsoft 365 administration,
+                    technical support, cybersecurity
+                    operations, vulnerability management, and
+                    security incident investigation.
                 </p>
 
-                <h3>Experience</h3>
+                <br>
 
-                <h4>Cloud Security Analyst | PAX8 | October 2024 - August 2026</h4>
                 <p>
-                    Security monitoring, incident response, threat intelligence,
-                    vulnerability assessment, risk management, and cross-functional
-                    security collaboration. 
+                    Driven by curiosity and a commitment to continuous learning, 
+                    I actively expand my technical expertise through professional development 
+                    and advanced academic studies in Data Science, Artificial Intelligence, 
+                    and Digital Business. My goal is to combine my extensive IT and 
+                    cybersecurity experience with emerging technologies to develop innovative, 
+                    data-driven solutions that address real-world challenges.
                 </p>
 
-                <h4>Technical Support Engineer | PAX8 | August 2023 - September 2024</h4>
-                <p>
-                    Microsoft 365 administration, Azure management,
-                    email security, endpoint protection, disaster recovery,
-                    cloud solutions, and SaaS backup platforms. 
+            </div>
+
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section class="resume-section">
+
+            <div class="resume-heading">
+                <p>CAREER HISTORY</p>
+                <h2>Work Experience</h2>
+            </div>
+
+            <!-- PAX8 CLOUD SECURITY -->
+            <article class="experience-card">
+
+                <p class="company-name">PAX8</p>
+
+                <h3 class="job-title">
+                    Cloud Security Analyst
+                </h3>
+
+                <p class="job-date">
+                    September 2024 – August 2026
                 </p>
 
-                <h4>Cloud Support Engineer Analyst - Microsoft Support | Accenture Inc. | April 2019 - February 2023</h4>
-                <p>
-                    Technical support for Microsoft 365, Exchange Online,
-                    Teams, SharePoint, OneDrive, Azure Active Directory,
-                    Security & Compliance, DNS configuration, and PowerShell. 
-                </p>
-
-                <h4>Software Engineer | Accenture Inc. | February 2019 - March 2019</h4>
-                <p>
-                    Infrastructure Services Bootcamp (Active Directory Architecture) 
-                    Application Development Bootcamp (T-SQL, Basic.Net, C#, HTML, CSS,
-                    Bootstrap, Javascript, ASP.NET MVC)
-
-                </p>
-
-                <h4>Cloud Support Engineer Analyst - Microsoft Support | Accenture Inc. | June 2019 - February 2024 2023</h4>
-                <p>
-                    Technical support for Microsoft 365, Exchange Online,
-                    Teams, SharePoint, OneDrive, Azure Active Directory,
-                    Security & Compliance, DNS configuration, and PowerShell. 
-                </p>
-
-                <h3>Education</h3>
-
-                <ul>
+                 <ul>
                     <li>
-                        MSc Data Science, Artificial Intelligence &
-                        Digital Business,
-                        Gisma University of Applied Sciences,
-                        Germany. 【1-6de479】
+                        <strong>Security Monitoring and Incident Triage:</strong>
+                        Monitor, analyze, and triage security alerts across cloud
+                        infrastructure, endpoints, and enterprise applications.
+                        Assess incident severity, investigate suspicious activities,
+                        and coordinate timely incident response and remediation.
                     </li>
 
                     <li>
-                        Bachelor of Science in Information Technology,
-                        Lyceum of Aparri, Philippines
-                        (Cum Laude). 【1-6de479】
+                        <strong>Cybersecurity Incident Investigation:</strong>
+                        Conduct comprehensive investigations into potential
+                        cyberattacks, including phishing, account compromise,
+                        unauthorized access, suspicious authentication activities,
+                        and other security threats. Identify root causes, assess
+                        business impact, and recommend containment and mitigation
+                        strategies.
+                    </li>
+
+                    <li>
+                        <strong>Fraud Detection and Investigation:</strong>
+                        Investigate suspected fraudulent activities, suspicious
+                        transactions, identity-related threats, and potential
+                        misuse of corporate systems. Analyze security logs,
+                        user activities, and available evidence to identify
+                        anomalies and support fraud prevention efforts.
+                    </li>
+
+                    <li>
+                        <strong>Third-Party and Vendor Security Assessments:</strong>
+                        Review security configurations, access permissions,
+                        authentication mechanisms, and security controls of
+                        third-party applications and vendor platforms.
+                        Identify security gaps and provide recommendations
+                        to strengthen organizational security.
+                    </li>
+
+                    <li>
+                        <strong>Endpoint Security and Microsoft Intune Administration:</strong>
+                        Configure, deploy, and manage Microsoft Intune security
+                        policies across the organization, including device
+                        compliance requirements, endpoint protection configurations,
+                        and security baselines to improve endpoint security
+                        and reduce organizational risk.
+                    </li>
+
+                    <li>
+                        <strong>Vulnerability Management and Risk Assessment:</strong>
+                        Evaluate vulnerabilities across corporate and production
+                        environments using CVSS scores, threat intelligence,
+                        and business risk context. Prioritize remediation tasks,
+                        recommend security improvements, and collaborate with
+                        responsible teams to address identified weaknesses.
+                    </li>
+
+                    <li>
+                        <strong>Threat Detection and Intelligence Analysis:</strong>
+                        Utilize SIEM, XDR, and cloud security platforms to
+                        correlate security events, identify suspicious behavior,
+                        investigate emerging threats, and strengthen detection
+                        and incident response capabilities.
+                    </li>
+
+                    <li>
+                        <strong>Security Documentation and Reporting:</strong>
+                        Maintain accurate documentation of security incidents,
+                        investigation findings, remediation actions, and
+                        security recommendations. Generate security metrics
+                        and reports to support Trust &amp; Security initiatives
+                        and continuous security improvement.
+                    </li>
+
+                    <li>
+                        <strong>Cross-Functional Security Collaboration:</strong>
+                        Collaborate with IT, Engineering, Legal, HR, and
+                        external vendors to investigate incidents, implement
+                        security controls, address organizational risks,
+                        and support compliance with security policies.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Jira, ServiceNow (SNOW), Microsoft Teams, Slack,
+                        Sumo Logic, Microsoft 365, Microsoft Defender,
+                        Microsoft Purview, Microsoft Azure, Microsoft Intune,
+                        AWS, Red Canary, Abnormal AI, Wiz, Grip Security,
+                        and PagerDuty.
                     </li>
                 </ul>
 
-                <h3>Certifications</h3>
+            </article>
 
-                <div class="skill-list">
-                    <span>CompTIA Security+</span>
-                    <span>ISC2 CC</span>
-                    <span>SC-100</span>
-                    <span>SC-200</span>
-                    <span>SC-400</span>
-                    <span>AZ-104</span>
-                    <span>MS-102</span>
+            <!-- PAX8 TECHNICAL SUPPORT -->
+            <article class="experience-card">
+
+                <p class="company-name">PAX8</p>
+
+                <h3 class="job-title">
+                    Technical Support Engineer
+                </h3>
+
+                <p class="job-date">
+                    August 2023 – September 2024
+                </p>
+                
+                <ul>
+                    <li>
+                        <strong>Cloud and Enterprise Technical Support:</strong>
+                        Delivered comprehensive technical support to Managed
+                        Service Providers (MSPs) and business partners across
+                        cloud productivity, infrastructure, cybersecurity,
+                        and business continuity solutions. Diagnosed and
+                        resolved complex technical issues to ensure service
+                        reliability and operational efficiency.
+                    </li>
+
+                    <li>
+                        <strong>Microsoft 365 Administration and Support:</strong>
+                        Troubleshot Microsoft 365 services, including
+                        Exchange Online, SharePoint, OneDrive, Teams,
+                        and Microsoft 365 administration. Assisted MSP
+                        administrators with configuration, licensing,
+                        user management, authentication, and service-related
+                        issues.
+                    </li>
+
+                    <li>
+                        <strong>Cloud Solution Provider (CSP) Management:</strong>
+                        Utilized Microsoft Partner Center to support
+                        Cloud Solution Provider operations, including
+                        customer tenant administration, subscription
+                        management, licensing, and partner-related
+                        technical issues.
+                    </li>
+
+                    <li>
+                        <strong>Productivity SAAS Solutions:</strong>
+                        Supported enterprise productivity and cloud
+                        applications, including Exclaimer, Acronis,
+                        and other integrated SaaS platforms. Investigated
+                        application configuration, service integration,
+                        authentication, and operational issues.
+                    </li>
+
+                    <li>
+                        <strong>Cloud Infrastructure:</strong>
+                        Provided technical assistance for infrastructure troubleshooting, virtual machine
+                        management, cloud configuration, and service
+                        availability investigations.
+                    </li>
+                    
+
+                    <li>
+                        <strong>Cybersecurity Solutions Support:</strong>
+                        Investigated and resolved technical issues involving
+                        endpoint protection, email security, threat detection,
+                        and identity security solutions. Supported products
+                        including SentinelOne, Bitdefender, CrowdStrike Falcon,
+                        Microsoft Defender, Check Point Avanan, IRONSCALES,
+                        Proofpoint, Keeper Security, LastPass, and Acronis.
+                    </li>
+
+                    <li>
+                        <strong>Backup, Disaster Recovery, and Business Continuity:</strong>
+                        Provided technical support for backup, data protection,
+                        and disaster recovery solutions, including Acronis,
+                        Axcient, Veeam, and Microsoft Purview.
+                        Assisted with backup troubleshooting, recovery
+                        operations, configuration issues, and data
+                        protection requirements.
+                    </li>
+
+
+                    <li>
+                        <strong>MSP Collaboration and Technical Troubleshooting:</strong>
+                        Worked directly with MSP administrators and
+                        technical teams to investigate complex incidents,
+                        identify root causes, recommend corrective actions,
+                        and coordinate escalations with vendors and
+                        internal support teams.
+                    </li>
+
+                    <li>
+                        <strong>Customer Communication and Incident Management:</strong>
+                        Managed technical support inquiries through
+                        Talkdesk and other support channels. Provided
+                        clear troubleshooting guidance, documented
+                        technical findings, and maintained professional
+                        communication throughout incident resolution.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Microsoft 365, Microsoft Azure, Microsoft Partner
+                        Center, Dropsuite, IONOS, Nerdio, Acronis, Axcient, Veeam,
+                        Microsoft Purview, Microsoft Defender, SentinelOne,
+                        Bitdefender, CrowdStrike Falcon, Check Point Avanan,
+                        IRONSCALES, Proofpoint, Keeper Security, LastPass,
+                        Exclaimer, and Talkdesk.
+                    </li>
+                </ul>
+
+
+            </article>
+
+            <!-- ACCENTURE ADVANCED SUPPORT -->
+            <article class="experience-card">
+
+                <p class="company-name">ACCENTURE INC.</p>
+
+                <h3 class="job-title">
+                    Advanced Application / Cloud Support
+                    & Engineer Analyst / Microsoft 365 Support
+                </h3>
+
+                <p class="job-date">
+                    April 2019 – February 2023
+                </p>
+
+                
+                <ul>
+                    <li>
+                        <strong>Microsoft 365 Consumer and Windows Technical Support:</strong>
+                        Delivered comprehensive technical support for Microsoft 365
+                        consumer solutions, Office applications,
+                        and Windows operating systems. Diagnosed and resolved
+                        software, configuration, installation, activation, licensing, billing
+                        and performance-related issues. Supported users in different 
+                        languages using chat and resolved technical issues.
+                    </li>
+
+                    <li>
+                        <strong>Enterprise Customer Support and Communication:</strong>
+                        Provided technical assistance enterprise-level customers, and IT administrators through
+                        email, live chat, inbound and outbound phone calls.
+                        Delivered clear troubleshooting guidance and maintained
+                        professional communication throughout case resolution. 
+                    </li>
+
+                    <li>
+                        <strong>Microsoft 365 Administration:</strong>
+                        Supported Microsoft 365 Admin Center and enterprise
+                        collaboration services, including Exchange Online,
+                        SharePoint Online, Microsoft Teams, and OneDrive.
+                        Troubleshot user access, service configuration,
+                        application functionality, and administrative issues.
+                    </li>
+
+                    <li>
+                        <strong>Microsoft Security and Compliance Support:</strong>
+                        Assisted with troubleshooting Microsoft Defender
+                        and Microsoft Purview (Security and Compliance)
+                        solutions, including security configurations,
+                        administrative settings, and compliance-related
+                        service issues.
+                    </li>
+
+                    <li>
+                        <strong>Identity and Access Management:</strong>
+                        Performed administrative and troubleshooting tasks
+                        in Azure Active Directory (Microsoft Entra ID),
+                        including user account management, access-related
+                        issues, audit log reviews, and security default
+                        configurations.
+                    </li>
+
+                    
+                    <li>
+                        <strong>DNS Configuration and PowerShell Administration:</strong>
+                        Configured and troubleshooted DNS records associated
+                        with Microsoft 365 services. Utilized PowerShell
+                        scripts and administrative commands to investigate
+                        technical issues and perform service management tasks.
+                    </li>
+
+                    <li>
+                        <strong>Incident Investigation and Problem Resolution:</strong>
+                        Conducted systematic troubleshooting of complex
+                        Microsoft 365 and Windows issues, identified
+                        potential root causes, implemented corrective
+                        actions, and coordinated technical escalations
+                        when advanced investigation was required.
+                    </li>
+
+                    <li>
+                        <strong>Service Level Agreement (SLA) Management:</strong>
+                        Managed support cases in accordance with established
+                        service-level agreements and operational procedures.
+                        Prioritized customer incidents, maintained accurate
+                        case documentation, and collaborated with specialized
+                        support teams to ensure timely resolution.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Rave, LogMeIn123, Microsoft 365 Admin Center, Exchange Online,
+                        SharePoint Online, Microsoft Teams, OneDrive,
+                        Microsoft Defender, Microsoft Purview,
+                        Microsoft Entra ID (Azure Active Directory),
+                        Windows, PowerShell, DNS, and Microsoft Office
+                        applications.
+                    </li>
+                </ul>
+
+
+            </article>
+
+            <!-- ACCENTURE ASSOCIATE SOFTWARE ENGINEER -->
+            <article class="experience-card">
+
+                <p class="company-name">ACCENTURE INC.</p>
+
+                <h3 class="job-title">
+                    Associate Software Engineer
+                </h3>
+
+                <p class="job-date">
+                    February 2019 – March 2019
+                </p>
+
+                
+                <ul>
+                    <li>
+                        <strong>Information Systems and Active Directory Training:</strong>
+                        Completed an intensive Information Systems Bootcamp
+                        focused on Active Directory architecture, gaining
+                        foundational knowledge of directory services,
+                        enterprise IT infrastructure, and identity
+                        management concepts. (1 month)
+                    </li>
+
+                    <li>
+                        <strong>Application Development Training:</strong>
+                        Completed a comprehensive Application Development
+                        Bootcamp covering fundamental software engineering
+                        principles, programming concepts, database
+                        development, and web application technologies. (1 month)
+                    </li>
+
+                    <li>
+                        <strong>Database and Backend Development:</strong>
+                        Developed foundational knowledge of Transact-SQL
+                        (T-SQL), C#, and .NET technologies, including
+                        database queries, application logic, and
+                        server-side programming concepts.
+                    </li>
+
+                    <li>
+                        <strong>Frontend and Web Development:</strong>
+                        Studied HTML, CSS, Bootstrap, and JavaScript
+                        to build foundational skills in web page
+                        structure, styling, responsive design,
+                        and client-side functionality.
+                    </li>
+
+                    <li>
+                        <strong>ASP.NET MVC Architecture:</strong>
+                        Gained exposure to ASP.NET MVC and the
+                        Model-View-Controller architectural pattern,
+                        including the separation of application
+                        logic, user interfaces, and data handling.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Active Directory, T-SQL, .NET Framework,
+                        C#, HTML, CSS, Bootstrap, JavaScript,
+                        ASP.NET MVC, and Blueprism.
+                    </li>
+                </ul>
+
+
+            </article>
+
+            <!-- SYKES -->
+            <article class="experience-card">
+
+                <p class="company-name">SYKES ASIA INC.</p>
+
+                <h3 class="job-title">
+                    Technical Support Representative
+                </h3>
+
+                <p class="job-date">
+                    November 2018 – January 2019
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Multichannel Customer Technical Support:</strong>
+                        Assisted students through live chat and inbound
+                        phone support, addressing product-related inquiries,
+                        technical difficulties, and concerns regarding
+                        purchased Pearson learning materials.
+                    </li>
+
+                    <li>
+                        <strong>Seasonal Enrollment Support:</strong>
+                        Supported increased student inquiries during the
+                        enrollment period, providing timely assistance
+                        and helping students access and use their
+                        purchased educational resources.
+                    </li>
+
+                    <li>
+                        <strong>Customer Service and Communication:</strong>
+                        Delivered clear, professional, and student-focused
+                        support by explaining technical solutions,
+                        responding to customer concerns, and maintaining
+                        a positive service experience.
+                    </li>
+                </ul>
+
+
+            </article>
+
+            <!-- ACCENTURE TRANSACTION PROCESSING -->
+            <article class="experience-card">
+
+                <p class="company-name">ACCENTURE INC.</p>
+
+                <h3 class="job-title">
+                    Transaction Processing Analyst
+                </h3>
+
+                <p class="job-date">
+                    February 2018 – May 2018
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Utility Billing Investigation and Resolution:</strong>
+                        Investigated and resolved electricity and gas billing
+                        discrepancies for Australian utility customers using
+                        SAP, ensuring accurate billing information and
+                        appropriate issue resolution.
+                    </li>
+
+                    <li>
+                        <strong>Billing Data Analysis and Validation:</strong>
+                        Reviewed utility billing records, meter readings,
+                        and consumption data to identify inconsistencies,
+                        investigate billing exceptions, and determine
+                        potential causes of discrepancies.
+                    </li>
+                </ul>
+
+
+            </article>
+
+            <!-- ACCENTURE CLOUD SOLUTION -->
+            <article class="experience-card">
+
+                <p class="company-name">ACCENTURE INC.</p>
+
+                <h3 class="job-title">
+                    IT Cloud Solution Analyst
+                </h3>
+
+                <p class="job-date">
+                    July 2016 – January 2018
+                </p>
+
+                
+                <ul>
+                    <li>
+                        <strong>Contract Creation and Management:</strong>
+                        Created, reviewed, and verified Verizon service
+                        contracts for Managed Hosting, Colocation, and
+                        Cloud solutions, ensuring accuracy, completeness,
+                        and compliance with established business
+                        requirements.
+                    </li>
+
+                    <li>
+                        <strong>Salesforce Data Entry and Validation:</strong>
+                        Performed accurate data entry and maintained
+                        contract-related information in Salesforce.
+                        Validated customer details, service specifications,
+                        and contractual information to minimize errors
+                        and maintain data integrity.
+                    </li>
+
+                    <li>
+                        <strong>Contract Quality Assurance:</strong>
+                        Reviewed contract documentation to identify
+                        discrepancies, missing information, and data
+                        inconsistencies. Ensured contract records were
+                        complete and accurate before processing.
+                    </li>
+
+                    <li>
+                        <strong>Pre-Sales Contract Support:</strong>
+                        Supported Verizon's pre-sales operations by
+                        preparing and verifying service contracts,
+                        ensuring that customer requirements and
+                        requested cloud and infrastructure services
+                        were accurately reflected in contract records.
+                    </li>
+
+                    <li>
+                        <strong>Subject Matter Expert (SME):</strong>
+                        Served as a Subject Matter Expert in pre-sales
+                        contract creation, providing process guidance,
+                        sharing best practices, and assisting team
+                        members with contract-related questions
+                        and data validation procedures.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Salesforce CRM, Citrix, Managed Hosting, Colocation,
+                        Cloud Services, Contract Management,
+                        and Data Validation.
+                    </li>
+                </ul>
+
+
+            </article>
+
+            <!-- ACCENTURE SAP -->
+            <article class="experience-card">
+
+                <p class="company-name">ACCENTURE INC.</p>
+
+                <h3 class="job-title">
+                    Application SAP Support
+                </h3>
+
+                <p class="job-date">
+                    August 2015 – June 2016
+                </p>
+
+                
+                <ul>
+                    <li>
+                        <strong>SAP Utility Billing Support:</strong>
+                        Analyzed and resolved billing exceptions within
+                        SAP utility systems, ensuring accurate processing
+                        of customer billing information and transactions.
+                    </li>
+
+                    <li>
+                        <strong>Workflow Error Investigation and Resolution:</strong>
+                        Investigated and resolved SAP workflow errors,
+                        identifying processing failures, system exceptions,
+                        and data inconsistencies to restore normal
+                        business operations.
+                    </li>
+
+                    <li>
+                        <strong>Billing Data Validation and Accuracy:</strong>
+                        Reviewed billing records and transaction details
+                        to identify discrepancies, validate information,
+                        and support accurate utility billing processes.
+                    </li>
+
+                    <li>
+                        <strong>Issue Analysis and Troubleshooting:</strong>
+                        Performed systematic analysis of SAP billing
+                        exceptions and workflow issues to identify
+                        underlying causes and implement appropriate
+                        corrective actions.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        SAP, Utility Billing Systems, Workflow
+                        Management, Data Validation, and
+                        Transaction Processing.
+                    </li>
+                </ul>
+
+
+            </article>
+
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="resume-section">
+
+            <div class="resume-heading">
+                <p>ACADEMIC BACKGROUND</p>
+                <h2>Education</h2>
+            </div>
+
+            <div class="education-card">
+
+                <h3>
+                    Master of Science in Data Science,
+                    Artificial Intelligence and Digital Business
+                </h3>
+
+                <h4>
+                    GISMA University of Applied Sciences
+                </h4>
+
+                <p>
+                    Potsdam, Germany
+                </p>
+
+                <p>
+                    June 2026 – Present
+                </p>
+
+            </div>
+
+            <div class="education-card">
+
+                <h3>
+                    Bachelor of Science in Information Technology
+                </h3>
+
+                <h4>
+                    Lyceum of Aparri
+                </h4>
+
+                <p>
+                    Cagayan, Philippines
+                </p>
+
+                <p>
+                    June 2011 – March 2015
+                </p>
+
+                
+                <div class="education-awards">
+                    <h3>Honors, Leadership &amp; Awards</h3>
+
+                    <ul class="awards-list">
+                        <li>
+                            <strong>Cum Laude</strong> – Academic Distinction
+                        </li>
+                        <li>
+                            <strong>President</strong> – College of Computing
+                            and Information Sciences
+                        </li>
+                        <li>
+                            <strong>Leadership Award</strong>
+                        </li>
+                        <li>
+                            <strong>Socio-Cultural Award</strong>
+                        </li>
+                        <li>
+                            <strong>Spiritual Award</strong>
+                        </li>
+                        <li>
+                            <strong>Community and Extension Award</strong>
+                        </li>
+                    </ul>
                 </div>
 
-                <h3>Core Expertise</h3>
 
-                <div class="skill-list">
-                    <span>Cloud Security</span>
-                    <span>Microsoft 365</span>
-                    <span>Azure</span>
-                    <span>Cybersecurity</span>
-                    <span>Threat Intelligence</span>
-                    <span>Incident Response</span>
-                    <span>Vulnerability Management</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Python</span>
+            </div>
+
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="resume-section">
+
+            <div class="resume-heading">
+                <p>PROFESSIONAL DEVELOPMENT</p>
+                <h2>Certifications</h2>
+            </div>
+
+            <div class="certification-grid">
+
+                <div class="certification-item">
+                    CompTIA – CompTIA Security+
+                </div>
+
+                <div class="certification-item">
+                    ISC2 – Certified in Cybersecurity (CC)
+                </div>
+
+                <div class="certification-item">
+                    AZ-900 – Microsoft Azure Fundamentals
+                </div>
+
+                <div class="certification-item">
+                    AZ-104 – Microsoft Certified Azure Administrator Associate
+                </div>
+
+                <div class="certification-item">
+                    MS-900 – Microsoft 365 Fundamentals
+                </div>
+
+                <div class="certification-item">
+                    MS-100 – Microsoft Identity and Services
+                </div>
+
+                <div class="certification-item">
+                    MS-102 – Microsoft 365 Certified Administrator Expert
+                </div>
+
+                <div class="certification-item">
+                    SC-900 – Microsoft Security, Compliance,
+                    and Identity Fundamentals
+                </div>
+
+                <div class="certification-item">
+                    SC-100 – Microsoft Certified Cybersecurity Architect Expert
+                </div>
+
+                <div class="certification-item">
+                    SC-200 – Microsoft Security Operations Analyst Associate
+                </div>
+
+                <div class="certification-item">
+                    SC-400 – Microsoft Information Protection Administrator
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- TECHNICAL SKILLS -->
+        <section class="resume-section">
+
+            <div class="resume-heading">
+                <p>TECHNICAL EXPERTISE</p>
+                <h2>Technical Skills</h2>
+            </div>
+
+            <div class="resume-skills">
+
+                <div class="resume-skill-card">
+
+                    <h3>Programming Languages</h3>
+
+                    <div class="skill-tags">
+                        <span>C++</span>
+                        <span>C#</span>
+                        <span>Visual Basic 6</span>
+                        <span>Java</span>
+                        <span>PHP</span>
+                        <span>ASP.NET MVC</span>
+                        <span>ASP.NET Web API</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Web Development</h3>
+
+                    <div class="skill-tags">
+                        <span>HTML5</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>React JS</span>
+                        <span>Angular</span>
+                        <span>Postman</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Database</h3>
+
+                    <div class="skill-tags">
+                        <span>T-SQL</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Automation & RPA</h3>
+
+                    <div class="skill-tags">
+                        <span>Blue Prism</span>
+                        <span>UiPath</span>
+                        <span>Automation Anywhere</span>
+                        <span>Power Automate</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Cloud & Microsoft Technologies</h3>
+
+                    <div class="skill-tags">
+                        <span>Microsoft 365</span>
+                        <span>Microsoft 365 Admin Center</span>
+                        <span>Microsoft Azure</span>
+                        <span>Azure Active Directory</span>
+                        <span>Windows OS</span>
+                        <span>PowerShell</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Cybersecurity Tools</h3>
+
+                    <div class="skill-tags">
+                        <span>SUMO Logic</span>
+                        <span>Red Canary</span>
+                        <span>Abnormal Activity</span>
+                        <span>Wiz</span>
+                        <span>Tenable</span>
+                        <span>Grid</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Enterprise Applications</h3>
+
+                    <div class="skill-tags">
+                        <span>SAP</span>
+                        <span>Salesforce</span>
+                        <span>Citrix</span>
+                        <span>Rave</span>
+                        <span>ServiceNow</span>
+                        <span>Jira</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-skill-card">
+
+                    <h3>Other Technical Skills</h3>
+
+                    <div class="skill-tags">
+                        <span>Networking</span>
+                        <span>Photoshop</span>
+                        <span>Adobe Illustrator</span>
+                        <span>Adobe InDesign CC 2018</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROFESSIONAL TRAINING -->
+        <section class="resume-section">
+
+            <div class="resume-heading">
+                <p>ADDITIONAL LEARNING</p>
+                <h2>Professional Training</h2>
+            </div>
+
+            
+            <div class="training-card">
+                <h3>KodeGo</h3>
+                <p><strong>Full Stack Developer Bootcamp</strong></p>
+                <p>March 31, 2023 – July 5, 2023</p>
+
+                <ul class="kodego-skills">
+                    <li>
+                        <strong>Front-End Development:</strong>
+                        HTML5, CSS3, JavaScript, React.js,
+                        Bootstrap, and Tailwind CSS.
+                    </li>
+
+                    <li>
+                        <strong>Back-End Development:</strong>
+                        PHP, Laravel, Node.js, Express.js,
+                        and REST API Development.
+                    </li>
+
+                    <li>
+                        <strong>Database Management:</strong>
+                        MySQL, MongoDB, SQL Queries,
+                        and CRUD Operations.
+                    </li>
+
+                    <li>
+                        <strong>Development Tools and Technologies:</strong>
+                        Git, GitHub, Visual Studio Code,
+                        Version Control, Responsive Web Design,
+                        and MVC Architecture.
+                    </li>
+
+                    <li>
+                        <strong>Full Stack Application Development:</strong>
+                        Studied the fundamentals of building
+                        responsive web applications, integrating
+                        front-end and back-end components,
+                        managing databases, and implementing
+                        application functionality.
+                    </li>
+                </ul>
+            </div>
+
+
+            
+            <div class="training-card">
+                <h3>Varia CyberSecurity</h3>
+                <p>
+                    <strong>
+                        Vulnerability Assessment and Penetration Testing
+                        (VAPT) Bootcamp
+                    </strong>
+                </p>
+                <p>September – October 2018 | 40 Hours</p>
+
+                <ul class="vapt-skills">
+                    <li>
+                        <strong>Linux and Cybersecurity Fundamentals:</strong>
+                        Gained hands-on experience using Kali Linux
+                        and CentOS for cybersecurity exercises,
+                        Linux administration, command-line operations,
+                        and security testing in a training environment.
+                    </li>
+
+                    <li>
+                        <strong>Vulnerability Assessment:</strong>
+                        Studied techniques for identifying security
+                        weaknesses, assessing vulnerabilities,
+                        and understanding potential risks across
+                        operating systems, networks, and applications.
+                    </li>
+
+                    <li>
+                        <strong>Penetration Testing and Ethical Hacking:</strong>
+                        Explored penetration testing methodologies,
+                        including reconnaissance, scanning,
+                        enumeration, vulnerability identification,
+                        exploitation concepts, and security reporting.
+                    </li>
+
+                    <li>
+                        <strong>Cyberattack Techniques and Threat Awareness:</strong>
+                        Studied common cyberattack techniques,
+                        including phishing, brute-force attacks,
+                        password attacks, denial-of-service (DoS),
+                        distributed denial-of-service (DDoS),
+                        man-in-the-middle (MITM), SQL injection,
+                        cross-site scripting (XSS), malware,
+                        and privilege escalation.
+                    </li>
+
+                    <li>
+                        <strong>Network Security and Analysis:</strong>
+                        Learned fundamental network security concepts,
+                        common attack vectors, network reconnaissance,
+                        and techniques for identifying potential
+                        security weaknesses.
+                    </li>
+
+                    <li>
+                        <strong>Security Risk Assessment and Mitigation:</strong>
+                        Developed foundational knowledge of evaluating
+                        security risks, understanding attack impacts,
+                        and recommending security controls to
+                        reduce vulnerabilities.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Kali Linux, CentOS, Linux Command Line,
+                        Vulnerability Assessment, Penetration Testing,
+                        Network Security, and Ethical Hacking.
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="training-card">
+                <h3>Philippine Graphic and Prints Training Center, Inc.</h3>
+
+                <p>
+                    <strong>Prepress Operation Training</strong>
+                </p>
+
+                <p>
+                    August 17, 2018 – October 24, 2018 | 372 Hours
+                </p>
+
+                <ul class="prepress-skills">
+                    <li>
+                        <strong>Graphic Design and Visual Communication:</strong>
+                        Developed practical skills in graphic design,
+                        visual composition, typography, color selection,
+                        and creating digital and print-ready materials.
+                    </li>
+
+                    <li>
+                        <strong>Photo Editing and Image Manipulation:</strong>
+                        Used Adobe Photoshop to edit and enhance photographs,
+                        adjust colors, retouch images, remove backgrounds,
+                        and create visual compositions for digital
+                        and printed materials.
+                    </li>
+
+                    <li>
+                        <strong>Magazine Design and Desktop Publishing:</strong>
+                        Used Adobe InDesign to create magazine layouts,
+                        organize text and images, apply typography,
+                        and develop professional multi-page publications.
+                    </li>
+
+                    <li>
+                        <strong>Packaging and Product Design:</strong>
+                        Created packaging designs and product graphics,
+                        applying layout principles, branding elements,
+                        and visual design techniques using Adobe
+                        Illustrator and Photoshop.
+                    </li>
+
+                    <li>
+                        <strong>Logo and Brand Identity Design:</strong>
+                        Designed logos and branding elements using
+                        Adobe Illustrator, focusing on vector graphics,
+                        shapes, typography, and visual consistency.
+                    </li>
+
+                    <li>
+                        <strong>Banner and Promotional Material Design:</strong>
+                        Created banners, advertisements, and promotional
+                        graphics for print and digital applications
+                        using Adobe design tools.
+                    </li>
+
+                    <li>
+                        <strong>Motion Graphics and Visual Effects:</strong>
+                        Gained experience using Adobe After Effects
+                        for basic motion graphics, animation,
+                        and visual effects.
+                    </li>
+
+                    <li>
+                        <strong>Prepress and Print Production Fundamentals:</strong>
+                        Studied the preparation of graphic materials
+                        for printing, including document layout,
+                        image resolution, color management,
+                        and print-ready file preparation.
+                    </li>
+
+                    <li>
+                        <strong>Tools and Technologies:</strong>
+                        Adobe Photoshop, Adobe Illustrator,
+                        Adobe InDesign, Adobe After Effects,
+                        Graphic Design, Photo Editing,
+                        Desktop Publishing, Packaging Design,
+                        and Print Production.
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="resume-section" id="languages">
+
+            <div class="resume-heading">
+                <p>COMMUNICATION SKILLS</p>
+                <h2>Languages</h2>
+            </div>
+
+            <div class="language-grid">
+
+                <!-- FILIPINO -->
+                <div class="language-card">
+                    <h3>Filipino</h3>
+                    <p class="language-level">Native Speaker</p>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="language-card">
+                    <h3>English</h3>
+                    <p class="language-level">C1 – Advanced</p>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="language-card german-card">
+                    <h3>Deutsch (German)</h3>
+                    <p class="language-level">A1 – Beginner</p>
+
+                    <div class="german-progress">
+
+                        <div class="german-level unlocked">
+                            <span>A1</span>
+                            <span class="level-status">
+                                ✓ Unlocked
+                            </span>
+                        </div>
+
+                        <div class="german-level locked">
+                            <span>A2</span>
+                            <span class="level-status">
+                                🔒 Locked
+                            </span>
+                        </div>
+
+                        <div class="german-level locked">
+                            <span>B1</span>
+                            <span class="level-status">
+                                🔒 Locked
+                            </span>
+                        </div>
+
+                        <div class="german-level locked">
+                            <span>B2</span>
+                            <span class="level-status">
+                                🔒 Locked
+                            </span>
+                        </div>
+
+                        <div class="german-level locked">
+                            <span>C1</span>
+                            <span class="level-status">
+                                🔒 Locked
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="about-contact">
+
+            <h2>Let's Connect!</h2>
+
+            <p>
+                Interested in technology, collaboration,
+                or professional opportunities?
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:rose.a.exile@gmail.com">
+                    rose.a.exile@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Phone: +49-152-58296946
+            </p>
+
+            <p>
+                Location: Potsdam, Germany
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn primary-btn">
+                Back to Home
+            </a>
+
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2026 Rosemarie Exile. All Rights Reserved.</p>
-        <p>Building secure and innovative technology solutions.</p>
+
+        <p>
+            © 2026 Rosemarie Exile. All Rights Reserved.
+        </p>
+
+        <p>
+            Building the future, one line of code at a time.
+        </p>
+
     </footer>
 
 </body>
